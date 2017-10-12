@@ -1,0 +1,95 @@
+<div class="top-content">
+  <div class="container">
+          
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text">
+                <h1>Angular 4-LoginApp</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text">
+              <a routerLink="/register">Register</a> 
+              <span class="show-forms-divider">/</span> 
+              <a routerLink="/login">Login</a>
+            </div>
+        </div>
+        
+        
+
+            <div class="col-sm-8 col-sm-offset-2 text">
+              <form #f="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label class="sr-only" for="firstname">First name</label>
+                    <input type="text" name="firstname" placeholder="First name..." class="r-form-first-name form-control" [(ngModel)]="model.firstname" required  #firstname="ngModel">
+                    <div class="errormsg" *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
+                      <p *ngIf="firstname.errors.required">Firstname  is required</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="lastname">Last name</label>
+                    <input type="text" name="lastname" placeholder="Last name..." class="r-form-last-name form-control" [(ngModel)]="model.lastname" required  #lastname="ngModel">
+                    <div class="errormsg" *ngIf="lastname.errors && (lastname.dirty || lastname.touched)">
+                      <p *ngIf="lastname.errors.required">Lastname  is required</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="emailid">Email</label>
+                    <input type="email" name="emailid" placeholder="Email..." class="r-form-email form-control" [(ngModel)]="model.emailid" required  #emailid="ngModel">
+                    <div class="errormsg" *ngIf="emailid.errors && (emailid.dirty || emailid.touched)">
+                      <p *ngIf="emailid.errors.required">Email  is required</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password..." class="r-form-email form-control" [(ngModel)]="model.password" required  #password="ngModel">
+                    <div class="errormsg" *ngIf="password.errors && (password.dirty || password.touched)">
+                      <p *ngIf="password.errors.required">Password  is required</p>
+                    </div>
+                  </div>
+            <button type="submit" class="btn" [disabled]="!f.valid">Sign me up!</button>
+    </form>
+            </div>
+           
+        </div>
+        
+        <!-- <div class="row login-form">
+            <div class="col-sm-8 col-sm-offset-2 text">
+    <form role="form" action="" method="post" class="l-form">
+                <div class="form-group">
+                  <label class="sr-only" for="l-form-username">Username</label>
+                    <input type="text" name="l-form-username" placeholder="Username..." class="l-form-username form-control" id="l-form-username">
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only" for="l-form-password">Password</label>
+                    <input type="password" name="l-form-password" placeholder="Password..." class="l-form-password form-control" id="l-form-password">
+                  </div>
+            <button type="submit" class="btn">Sign in!</button>
+      </form>
+      <div class="social-login">
+                  <p>Or login with:</p>
+                  <div class="social-login-buttons">
+                    <a class="btn btn-link-1" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-link-1" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-link-1" href="#"><i class="fa fa-google-plus"></i></a>
+                  </div>
+                </div>
+            </div>
+           
+        </div>
+             -->
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="footer-border"></div>
+        <p> <a href="" target="_blank">Welcome Angular4</a>.</p>
+      </div>
+      
+    </div>
+  </div>
+</footer>
